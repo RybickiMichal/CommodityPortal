@@ -14,6 +14,8 @@ import {StockComponent} from './component/stock/stock.component';
 import { MetalComponent } from './component/metal/metal.component';
 import { ResourceComponent } from './component/resource/resource.component';
 import { AboutComponent } from './component/about/about.component';
+import { AddCommodityFormComponent } from './component/add-commodity-form/add-commodity-form.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { AboutComponent } from './component/about/about.component';
     StockComponent,
     MetalComponent,
     ResourceComponent,
-    AboutComponent
+    AboutComponent,
+    AddCommodityFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

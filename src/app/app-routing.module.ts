@@ -8,6 +8,7 @@ import {ErrorpageComponent} from "./component/errorpage/errorpage.component";
 import {MetalComponent} from "./component/metal/metal.component";
 import {ResourceComponent} from "./component/resource/resource.component";
 import {AboutComponent} from "./component/about/about.component";
+import {AddCommodityFormComponent} from "./component/add-commodity-form/add-commodity-form.component";
 
 const routes: Routes = [
   { path: '' , redirectTo: '/main', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'stock/:market' , component: StockComponent },
   { path: 'reit' , component: ReitComponent },
   { path: 'about' , component: AboutComponent },
+  { path: 'form' , component: AddCommodityFormComponent },
   { path: '**' , component: ErrorpageComponent },
 ];
 

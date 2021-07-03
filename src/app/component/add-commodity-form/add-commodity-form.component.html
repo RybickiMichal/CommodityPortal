@@ -1,0 +1,37 @@
+<form #formResult="ngForm" (ngSubmit)="submit(formResult)">
+
+  <div class="form-group">
+    <label for="index">Index</label>
+    <input required="" ngModel name="index" #index="ngModel" id="index" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="index.touched && !index.valid">Index is required.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="scrapingStrategy">ScrapingStrategy</label>
+    <select required="" ngModel name="scrapingStrategy" #scrapingStrategy="ngModel" id="scrapingStrategy" class="form-control">
+      <option *ngFor="let strategy of scrapingStrategies" [value]="strategy">{{strategy}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="scrapingStrategy.value=='PULS_BIZNESU'" class="form-group">
+    <label for="dataSource">Data Source</label>
+    <input required="" ngModel name="dataSource" id="dataSource" #dataSource="ngModel" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="dataSource.touched && !dataSource.valid">Data Source is required when scraping strategy = PULS_BIZNESU.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="commodityType">Commodity Type</label>
+    <select required="" ngModel name="commodityType" #commodityType="ngModel" id="commodityType" class="form-control">
+      <option *ngFor="let type of commodityTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="commodityType.value!='CRYPTO'" class="form-group">
+    <label for="commoditySector">Commodity Sector</label>
+    <select required="" ngModel name="commoditySector" id="commoditySector" class="form-control">
+      <option *ngFor="let sector of commoditySectors" [value]="sector">{{sector}}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" [disabled]="!formResult.valid">Submit</button>
+</form>
