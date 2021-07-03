@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {CommodityDataService} from "../../service/commodity-data.service";
-import {Commodity} from "../../app.module";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -9,26 +7,11 @@ import {Commodity} from "../../app.module";
 })
 export class MainComponent implements OnInit {
 
-  constructor(private commodityDataService:CommodityDataService) { }
-  commodities: Commodity[] = []
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.getData()
   }
 
-  getData() {
-    this.commodityDataService.getCryptoCurrencies().subscribe(
-      response => {
-        console.log(response)
-
-        let commodities: Commodity[] = [];
-        response.forEach(value => {
-          let json = JSON.stringify(value).replace("{\"Item\":","").slice(0, -1);
-          commodities.push(JSON.parse(json))
-        })
-        this.commodities = commodities;
-      }
-    )
-  }
 
 }
