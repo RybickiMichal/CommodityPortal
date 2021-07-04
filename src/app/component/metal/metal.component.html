@@ -1,1 +1,29 @@
-<p>metal works!</p>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Index</th>
+      <th>Type</th>
+      <th>Id</th>
+      <th>Scraping Strategy</th>
+      <th>Price</th>
+      <th>currency</th>
+      <th>Last scraping date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let commodity of commodities">
+      <td>{{commodity.index}}</td>
+      <td>{{commodity.commodityType}}</td>
+      <td>{{commodity.commodityId}}</td>
+      <td>{{commodity.scrapingStrategy}}</td>
+      <td>{{commodity.price}}</td>
+      <td>{{commodity.currency}}</td>
+      <td>{{commodity.lastScrapingDate}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <BR>
+  <BR>
+</div>

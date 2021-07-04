@@ -19,7 +19,7 @@ export class CryptoComponent implements OnInit {
   }
 
   getData() {
-    this.commodityDataService.getCryptoCurrencies().subscribe(
+    this.commodityDataService.getCommoditiesByType("CRYPTO").subscribe(
       response => {
         console.log(response)
         this.commodities = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response)

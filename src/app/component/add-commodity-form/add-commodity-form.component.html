@@ -26,7 +26,7 @@
     </select>
   </div>
 
-  <div *ngIf="commodityType.value!='CRYPTO'" class="form-group">
+  <div *ngIf="(commodityType.value!='CRYPTO' && commodityType.value!='REIT')" class="form-group">
     <label for="commoditySector">Commodity Sector</label>
     <select required="" ngModel name="commoditySector" id="commoditySector" class="form-control">
       <option *ngFor="let sector of commoditySectors" [value]="sector">{{sector}}</option>

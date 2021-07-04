@@ -33,7 +33,7 @@ export class StockComponent implements OnInit {
   }
 
   getEMData() {
-    this.commodityDataService.getPlStocks().subscribe(
+    this.commodityDataService.getCommoditiesByType("PL_STOCK").subscribe(
       response => {
         console.log(response)
         this.commodities = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response)
@@ -42,7 +42,7 @@ export class StockComponent implements OnInit {
   }
 
   getDMData() {
-    this.commodityDataService.getUsStocks().subscribe(
+    this.commodityDataService.getCommoditiesByType("US_STOCK").subscribe(
       response => {
         console.log(response)
         this.commodities = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response);
