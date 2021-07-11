@@ -34,7 +34,7 @@ export class IndustrialResourcesComponent implements OnInit {
   getIndustrialStocksAndETFs() {
     this.commodityDataService.getCommoditiesByType("MINING_ENERGY_STOCK_OR_ETF").subscribe(
       response => {
-        console.log(response)
+
         this.industrialStocksAndETFs = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response);
       }
     )
@@ -48,6 +48,13 @@ export class IndustrialResourcesComponent implements OnInit {
       }
     });
     return stocks;
+  }
+
+  isHigherThanActual(numberToCompare: string, number: string) {
+    return parseFloat(numberToCompare) > parseFloat(number);
+  }
+  isLowerThanActual(numberToCompare: string, number: string) {
+    return parseFloat(numberToCompare) < parseFloat(number);
   }
 
 }

@@ -11,12 +11,12 @@ import {ErrorpageComponent} from './component/errorpage/errorpage.component';
 import {CryptoComponent} from './component/crypto/crypto.component';
 import {ReitComponent} from './component/reit/reit.component';
 import {StockComponent} from './component/stock/stock.component';
-import { MetalComponent } from './component/metal/metal.component';
-import { ResourceComponent } from './component/resource/resource.component';
-import { AboutComponent } from './component/about/about.component';
-import { AddCommodityFormComponent } from './component/add-commodity-form/add-commodity-form.component';
+import {MetalComponent} from './component/metal/metal.component';
+import {ResourceComponent} from './component/resource/resource.component';
+import {AboutComponent} from './component/about/about.component';
+import {AddCommodityFormComponent} from './component/add-commodity-form/add-commodity-form.component';
 import {FormsModule} from "@angular/forms";
-import { IndustrialResourcesComponent } from './component/industrial-resources/industrial-resources.component';
+import {IndustrialResourcesComponent} from './component/industrial-resources/industrial-resources.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,15 @@ export class Commodity {
     public lastScrapingDate: string,
     public price: string,
     public currency: string,
-    public comment: string
+    public comment: string,
+    public lowOneYear: string,
+    public highOneYear: string,
+    public lowThreeYears: string,
+    public highThreeYears: string,
+    public lowFiveYears: string,
+    public highFiveYears: string,
+    public lowTenYears: string,
+    public highTenYears: string,
   ) {
 
   }
