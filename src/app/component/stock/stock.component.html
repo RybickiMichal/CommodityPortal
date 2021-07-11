@@ -4,22 +4,26 @@
     <tr>
       <th>Index</th>
       <th>Type</th>
-      <th>Id</th>
       <th>Scraping Strategy</th>
-      <th>Price</th>
+      <th>Sector</th>
+      <th>Sector</th>
+      <th>Industrial Raw Material</th>
       <th>currency</th>
       <th>Last scraping date</th>
+      <th>Comment</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let commodity of commodities">
       <td>{{commodity.index}}</td>
       <td>{{commodity.commodityType}}</td>
-      <td>{{commodity.commodityId}}</td>
       <td>{{commodity.scrapingStrategy}}</td>
+      <td>{{commodity.commoditySector}}</td>
+      <td>{{commodity.rawMaterial}}</td>
       <td>{{commodity.price}}</td>
       <td>{{commodity.currency}}</td>
       <td>{{commodity.lastScrapingDate}}</td>
+      <td>{{commodity.comment}}</td>
     </tr>
     </tbody>
   </table>

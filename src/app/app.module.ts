@@ -16,6 +16,7 @@ import { ResourceComponent } from './component/resource/resource.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddCommodityFormComponent } from './component/add-commodity-form/add-commodity-form.component';
 import {FormsModule} from "@angular/forms";
+import { IndustrialResourcesComponent } from './component/industrial-resources/industrial-resources.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {FormsModule} from "@angular/forms";
     MetalComponent,
     ResourceComponent,
     AboutComponent,
-    AddCommodityFormComponent
+    AddCommodityFormComponent,
+    IndustrialResourcesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +51,13 @@ export class Commodity {
     public index: string,
     public commodityId: string,
     public commodityType: string,
+    public commoditySector: string,
+    public rawMaterial: string,
     public scrapingStrategy: string,
     public lastScrapingDate: string,
     public price: string,
-    public currency: string
+    public currency: string,
+    public comment: string
   ) {
 
   }

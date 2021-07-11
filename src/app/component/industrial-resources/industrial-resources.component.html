@@ -1,0 +1,26 @@
+<div class="container">
+<h4>URAN</h4>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Index</th>
+      <th>Cena</th>
+      <th>Waluta</th>
+      <th>Opis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let commodity of getIndustrialStocksAndETFsByRawMaterial('URANIUM')">
+      <td>{{commodity.index}}</td>
+      <td>{{commodity.price}}</td>
+      <td>{{commodity.currency}}</td>
+      <td>{{commodity.comment}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <BR>
+  <BR>
+</div>
+
+
