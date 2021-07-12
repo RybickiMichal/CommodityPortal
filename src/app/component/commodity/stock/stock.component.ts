@@ -1,8 +1,8 @@
 import {Component, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CommodityDataService} from "../../service/commodity-data.service";
-import {Commodity} from "../../app.module";
-import {CommoditiesJsonHelperService} from "../../service/commodities-json-helper.service";
+import {CommodityDataService} from "../../../service/commodity-data.service";
+import {Commodity} from "../../../app.module";
+import {CommoditiesJsonHelperService} from "../../../service/commodities-json-helper.service";
 
 @Component({
   selector: 'app-stock',

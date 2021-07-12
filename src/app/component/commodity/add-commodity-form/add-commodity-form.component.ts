@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CommodityDataService} from "../../service/commodity-data.service";
-import {Commodity} from "../../app.module";
+import {CommodityDataService} from "../../../service/commodity-data.service";
+import {Commodity} from "../../../app.module";
 
 @Component({
   selector: 'app-add-commodity-form',

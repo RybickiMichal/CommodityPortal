@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {CommodityDataService} from "../../service/commodity-data.service";
+import {CommodityDataService} from "../../../service/commodity-data.service";
 import {ActivatedRoute} from "@angular/router";
-import {CommoditiesJsonHelperService} from "../../service/commodities-json-helper.service";
-import {Commodity} from "../../app.module";
+import {CommoditiesJsonHelperService} from "../../../service/commodities-json-helper.service";
+import {Commodity} from "../../../app.module";
 
 @Component({
   selector: 'app-industrial-resources',

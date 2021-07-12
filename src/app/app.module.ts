@@ -1,22 +1,23 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {NavbarComponent} from './component/navbar/navbar.component';
-import {MainComponent} from './component/main/main.component';
-import {RightbarComponent} from './component/rightbar/rightbar.component';
+import {AppComponent} from "./app.component";
+import {NavbarComponent} from "./component/navbar/navbar.component";
+import {MainComponent} from "./component/main/main.component";
+import {RightbarComponent} from "./component/rightbar/rightbar.component";
+import {ErrorpageComponent} from "./component/errorpage/errorpage.component";
+import {CryptoComponent} from "./component/commodity/crypto/crypto.component";
+import {ReitComponent} from "./component/commodity/reit/reit.component";
+import {StockComponent} from "./component/commodity/stock/stock.component";
+import {PreciousMetalComponent} from "./component/commodity/precious-metals/precious-metal.component";
+import {ResourceComponent} from "./component/commodity/resource/resource.component";
+import {AboutComponent} from "./component/about/about.component";
+import {AddCommodityFormComponent} from "./component/commodity/add-commodity-form/add-commodity-form.component";
+import {IndustrialResourcesComponent} from "./component/commodity/industrial-resources/industrial-resources.component";
+import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
-import {ErrorpageComponent} from './component/errorpage/errorpage.component';
-import {CryptoComponent} from './component/crypto/crypto.component';
-import {ReitComponent} from './component/reit/reit.component';
-import {StockComponent} from './component/stock/stock.component';
-import {PreciousMetalComponent} from './component/precious-metals/precious-metal.component';
-import {AboutComponent} from './component/about/about.component';
-import {AddCommodityFormComponent} from './component/add-commodity-form/add-commodity-form.component';
 import {FormsModule} from "@angular/forms";
-import {IndustrialResourcesComponent} from './component/industrial-resources/industrial-resources.component';
-import {ResourceComponent} from "./component/resource/resource.component";
+
+
 
 @NgModule({
   declarations: [

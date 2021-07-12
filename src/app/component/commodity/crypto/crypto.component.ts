@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Commodity} from "../../app.module";
-import {CommodityDataService} from "../../service/commodity-data.service";
-import {CommoditiesJsonHelperService} from "../../service/commodities-json-helper.service";
+import {Commodity} from "../../../app.module";
+import {CommodityDataService} from "../../../service/commodity-data.service";
+import {CommoditiesJsonHelperService} from "../../../service/commodities-json-helper.service";
 
 @Component({
   selector: 'app-crypto',

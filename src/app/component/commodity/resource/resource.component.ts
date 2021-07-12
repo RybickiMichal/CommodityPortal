@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Commodity} from "../../app.module";
+import {Commodity} from "../../../app.module";
 
 @Component({
   selector: 'app-resource',
