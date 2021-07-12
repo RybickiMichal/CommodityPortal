@@ -49,12 +49,4 @@ export class IndustrialResourcesComponent implements OnInit {
     });
     return stocks;
   }
-
-  isHigherThanActual(numberToCompare: string, number: string) {
-    return parseFloat(numberToCompare) > parseFloat(number);
-  }
-  isLowerThanActual(numberToCompare: string, number: string) {
-    return parseFloat(numberToCompare) < parseFloat(number);
-  }
-
 }

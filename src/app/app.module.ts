@@ -11,12 +11,12 @@ import {ErrorpageComponent} from './component/errorpage/errorpage.component';
 import {CryptoComponent} from './component/crypto/crypto.component';
 import {ReitComponent} from './component/reit/reit.component';
 import {StockComponent} from './component/stock/stock.component';
-import {MetalComponent} from './component/metal/metal.component';
-import {ResourceComponent} from './component/resource/resource.component';
+import {PreciousMetalComponent} from './component/precious-metals/precious-metal.component';
 import {AboutComponent} from './component/about/about.component';
 import {AddCommodityFormComponent} from './component/add-commodity-form/add-commodity-form.component';
 import {FormsModule} from "@angular/forms";
 import {IndustrialResourcesComponent} from './component/industrial-resources/industrial-resources.component';
+import {ResourceComponent} from "./component/resource/resource.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import {IndustrialResourcesComponent} from './component/industrial-resources/ind
     CryptoComponent,
     ReitComponent,
     StockComponent,
-    MetalComponent,
+    PreciousMetalComponent,
     ResourceComponent,
     AboutComponent,
     AddCommodityFormComponent,

@@ -5,10 +5,10 @@ import {Commodity} from "../../app.module";
 
 @Component({
   selector: 'app-metal',
-  templateUrl: './metal.component.html',
-  styleUrls: ['./metal.component.css']
+  templateUrl: './precious-metal.component.html',
+  styleUrls: ['./precious-metal.component.css']
 })
-export class MetalComponent implements OnInit {
+export class PreciousMetalComponent implements OnInit {
 
   constructor(private commodityDataService:CommodityDataService,
               private commoditiesJsonHelperService:CommoditiesJsonHelperService) { }

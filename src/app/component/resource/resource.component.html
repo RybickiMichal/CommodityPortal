@@ -1,27 +1,36 @@
 <div class="container">
+  <h4>{{rawMaterialName}}</h4>
   <table class="table">
     <thead>
     <tr>
       <th>Index</th>
-      <th>Type</th>
-      <th>Id</th>
-      <th>Scraping Strategy</th>
-      <th>Sector</th>
-      <th>Price</th>
-      <th>currency</th>
-      <th>Last scraping date</th>
+      <th>Cena</th>
+      <th>Waluta</th>
+      <th>Low 1y</th>
+      <th>Low 3y</th>
+      <th>Low 5y</th>
+      <th>Low 10y</th>
+      <th>High 1y</th>
+      <th>High 3y</th>
+      <th>High 5y</th>
+      <th>High 10y</th>
+      <th>Opis (najedź by rozwinąć)</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let commodity of commodities">
       <td>{{commodity.index}}</td>
-      <td>{{commodity.commodityType}}</td>
-      <td>{{commodity.commodityId}}</td>
-      <td>{{commodity.scrapingStrategy}}</td>
-      <td>{{commodity.commoditySector}}</td>
       <td>{{commodity.price}}</td>
       <td>{{commodity.currency}}</td>
-      <td>{{commodity.lastScrapingDate}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.lowOneYear, commodity.price), decrease: isLowerThanActual(commodity.lowOneYear, commodity.price)}">{{commodity.lowOneYear | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.lowThreeYears, commodity.price), decrease: isLowerThanActual(commodity.lowThreeYears, commodity.price)}">{{commodity.lowThreeYears | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.lowFiveYears, commodity.price), decrease: isLowerThanActual(commodity.lowFiveYears, commodity.price)}">{{commodity.lowFiveYears | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.lowOneYear, commodity.price), decrease: isLowerThanActual(commodity.lowTenYears, commodity.price)}">{{commodity.lowTenYears | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.highOneYear, commodity.price), decrease: isLowerThanActual(commodity.highOneYear, commodity.price)}">{{commodity.highOneYear | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.highThreeYears, commodity.price), decrease: isLowerThanActual(commodity.highThreeYears, commodity.price)}">{{commodity.highThreeYears | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.highFiveYears, commodity.price), decrease: isLowerThanActual(commodity.highFiveYears, commodity.price)}">{{commodity.highFiveYears | number:'1.2-2'}}</td>
+      <td [ngClass]="{increase: isHigherThanActual(commodity.highTenYears, commodity.price), decrease: isLowerThanActual(commodity.highTenYears, commodity.price)}">{{commodity.highTenYears | number:'1.2-2'}}</td>
+      <td class="ellipsis"><span>{{commodity.comment}}</span></td>
     </tr>
     </tbody>
   </table>

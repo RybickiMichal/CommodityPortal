@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {CommodityDataService} from "../../service/commodity-data.service";
-import {ActivatedRoute} from "@angular/router";
-import {CommoditiesJsonHelperService} from "../../service/commodities-json-helper.service";
+import {Component, Input, OnInit} from '@angular/core';
 import {Commodity} from "../../app.module";
 
 @Component({
@@ -11,43 +8,19 @@ import {Commodity} from "../../app.module";
 })
 export class ResourceComponent implements OnInit {
 
-  constructor(private commodityDataService:CommodityDataService,
-              private route:ActivatedRoute,
-              private commoditiesJsonHelperService:CommoditiesJsonHelperService) { }
-  commodities: Commodity[] = []
+  @Input() commodities: Commodity[] = [];
+  @Input() rawMaterialName: String = '';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.getData(this.route.snapshot.params['type'])
-
-    this.route.params.subscribe(params => {
-      this.getData(params['type'])
-    })
   }
 
-  getData(market:string){
-    if(market === "agro"){
-      this.getAgroData()
-    }else{
-      this.getIndustrialData()
-    }
+  isHigherThanActual(numberToCompare: string, number: string) {
+    return parseFloat(numberToCompare) > parseFloat(number);
   }
-
-  getAgroData() {
-    this.commodityDataService.getCommoditiesByType("AGRO").subscribe(
-      response => {
-        console.log(response)
-        this.commodities = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response)
-      }
-    )
+  isLowerThanActual(numberToCompare: string, number: string) {
+    return parseFloat(numberToCompare) < parseFloat(number);
   }
-
-  getIndustrialData() {
-    this.commodityDataService.getCommoditiesByType("INDUSTRIAL_RESOURCE").subscribe(
-      response => {
-        console.log(response)
-        this.commodities = this.commoditiesJsonHelperService.getCommoditiesWithoutItems(response);
-      }
-    )
-  }
-
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MetalComponent } from './metal.component';
+import { PreciousMetalComponent } from './precious-metal.component';
 
-describe('MetalComponent', () => {
-  let component: MetalComponent;
-  let fixture: ComponentFixture<MetalComponent>;
+describe('PreciousMetalComponent', () => {
+  let component: PreciousMetalComponent;
+  let fixture: ComponentFixture<PreciousMetalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MetalComponent ]
+      declarations: [ PreciousMetalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MetalComponent);
+    fixture = TestBed.createComponent(PreciousMetalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
